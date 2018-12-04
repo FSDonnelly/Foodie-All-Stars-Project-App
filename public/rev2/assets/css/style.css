@@ -1,0 +1,76 @@
+/* ---- Main Style for bon appéEAT -------------- */
+/* ---- UCSD: Project One ----------------------- */
+/* ---- Date: 120318 ---------------------------- */
+/* ---- Group: Frank, Iris, Star, Ahmed, Kat ---- */
+
+/* GLOBAL */
+
+body {
+    /* font-family:  */
+    padding-bottom: 120px;
+
+    /* margin-bottom: 60px; */
+    /* background-image: url("../imgs/foodbg-50-darker.png"); */
+}
+
+/* MAIN STRUCTURE, INCLUDING FORCED BS*/
+
+.container {}
+
+.jumbotron {
+    margin-top: 10px;
+    background-color: #000;
+    color: #fff;
+
+    /* styling only if an img is loaded */
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -10px;
+    background-size: cover; */
+}
+
+.row {
+    margin-left: 0;
+}
+
+/* RECIPES.HTML PAGE */
+
+#displayResults {
+    text-align: center;
+    background-color: firebrick;
+    border: 2px solid darkred;
+    padding: 10px;
+
+    /* float: left;
+    display: flex; */
+}
+
+.verticalList {
+    /* white-space: pre; */
+}
+
+/* GLOBAL FOOTERS */
+
+#footer {
+    background-color: #000;
+    color: #fff;
+
+    /* styling only if an img is loaded */
+    /* background-position: center;
+    background-position-y: -10px;
+    background-size: cover; */ */
+}
+
+/* Keep, BS Sticky Footer -K */
+#force-height {
+    height: 200px;
+}
+
+/* Keep, BS Sticky Footer Overlap Fix -K */
+.push {
+    height: 50px;
+}
+
+.bg-light {
+    /* background-color: #000; */
+}

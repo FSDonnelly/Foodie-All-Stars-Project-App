@@ -151,7 +151,7 @@ function testAjax(queryURL) {
 
 				// Dynamically create external recipe link and open the link in a new tab.
 				var link = $("<a>");
-				link.text("Instructions");
+				link.text("More info");
 				sourceLink = data.hits[i].recipe.url;
 				link.attr("href", sourceLink);
 				// Adding attribute to link so that recipe link opens in a new tab window.
@@ -159,7 +159,7 @@ function testAjax(queryURL) {
 
 				// Dynamically create button for saving recipes to recipe box.
 				var saveBtn = $("<i>");
-				saveBtn.addClass("small fa fa-birthday-cake");
+				saveBtn.addClass("small fa fa-cutlery tooltipped");
 
 				// Add data attributes to display tooltip text. data-position=top shows tooltip text above button.
 				// data-tooltip is the tooltip text that appears when user hovers over button.

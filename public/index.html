@@ -18,12 +18,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 	<!-- Google Fonts: Lobster -->
-	<link href="https://fonts.googleapis.com/css?family=Aladin|Arima+Madurai:900|Fredericka+the+Great|Nanum+Pen+Script|Titan+One"
-	 rel="stylesheet">
-
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
 	<!--External css file-->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -45,56 +40,55 @@
 	<!--Top Navigation Bar-->
 	<nav class="warpper" role="navigation">
 		<div class="container" id="navigation_bar">
-			<a href="#"><i class="small fa fa-birthday-cake modal-trigger tooltipped" data-position="bottom" data-tooltip="Click to view saved recipes"
-				 data-delay="30" href="#recipe-box-modal" id="recipe-box-btn"></i><span class="start-screen-font" style="    font-size:24pt;">&nbsp;&nbsp;bon
-					appéEAT</span></a>
-			<!-- Branding in navbar -->
+			<a href="#"><h4 class="start-screen-font">bon appéEAT&nbsp;&nbsp;<i class="small fa fa-cutlery modal-trigger tooltipped" data-position="bottom" data-tooltip="Click to view saved recipes"
+				 data-delay="30" href="#recipe-box-modal" id="recipe-box-btn"></i></h4></a>
+				 <!-- Branding in navbar -->
 			<!--Log out button and username displayed in navbar-->
 			<ul class="right navbar_list">
 				<li>
 					<p id="member-info"></p>
 				<li>
-				<li><a href="#logout-confirm-modal" class="waves-effect waves-green btn card modal-trigger right" id="logout-btn"
+				<li><a href="#logout-confirm-modal" class="waves-effect waves-light btn card modal-trigger right" id="logout-btn"
 					 onclick="logOut()">Log Out</a></li>
 			</ul>
 		</div>
 	</nav>
 
 	<!-- Modal Structure. This is the log in confirmation screen -->
-	<!-- <div id="login-confirm-modal" class="modal black-text">
+	<div id="login-confirm-modal" class="modal black-text">
 		<div class="modal-content">
 			<h4>Logged in</h4>
 			<p>You are currently logged in to the app. To log out, click LOG OUT.</p>
-			<a class="waves-effect waves-green btn card modal-action modal-close right" id="login-confirm-btn">Close</a>
+			<a class="waves-effect waves-light btn card modal-action modal-close right" id="login-confirm-btn">Close</a>
 		</div>
-	</div> -->
+	</div>
 
 	<!-- Modal Structure. This is the logged out confirmation screen -->
-	<!-- <div id="logout-confirm-modal" class="modal black-text">
+	<div id="logout-confirm-modal" class="modal black-text">
 		<div class="modal-content">
 			<h4>Logged out</h4>
 			<p>You have logged out of the app. To log in again, click LOG IN.</p>
 			<p>You must be logged in to see your saved recipes in your Recipe box.</p>
-			<a class="waves-effect waves-green btn card modal-action modal-close right" id="logout-confirm-btn">Close</a>
+			<a class="waves-effect waves-light btn card modal-action modal-close right" id="logout-confirm-btn">Close</a>
 		</div>
-	</div> -->
+	</div>
 
 	<main>
 		<div class="container">
 			<div class="row">
 				<!--Main recipe search field. Only show when user is logged in.-->
 				<div class="col s12 loggedin-content">
-					<h5 id="search-food">Go ahead and search away!</h5>
+					<h5>Find something to make:</h5>
 					<div class="input-field">
 						<input id="user-input" type="text" class="validate">
 						<label for="text" data-error="wrong" data-success="right">for example, cake! Mmm, Yummy...</label>
-						<button class="btn waves-effect waves-green" type="submit" name="action" id="submit">Find</button>
+						<button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Find</button>
 					</div>
 				</div>
 
 				<!--Show start screen when user is logged out-->
 				<div class="col s12" id="start-screen">
-					<h4 class="center-align start-screen-font" id="header">Everything is delicious @ bon appéEAT</h4>
+					<h4 class="center-align start-screen-font">Welcome to bon appéEAT</h4>
 					<div class-"input-field">
 						<input id="email-input" class="validate" type="email" placeholder="e.g., star@bonapp.com, iris@bonapp.com, frank@bonapp.com, ahmed@bonapp.com, kat@bonapp.com">
 						<label for="email" data-error="wrong" data-success="right">Email</label>
@@ -103,8 +97,8 @@
 					</div>
 					<br>
 					<br>
-					<a class="waves-effect waves-green btn card" id="login-btn" onclick="login()">Log in</a>
-					<a class="waves-effect waves-green btn card right" id="signup-btn" onclick="signUp()">Sign Up</a>
+					<a class="waves-effect waves-light btn card" id="login-btn" onclick="login()">Log in</a>
+					<a class="waves-effect waves-light btn card right" id="signup-btn" onclick="signUp()">Sign Up</a>
 					<p id="error"></p>
 				</div>
 			</div>
@@ -126,7 +120,7 @@
 				<div class=" \col s12">
 					<div class= "col s4">
 						<div class= "col s4"> -->
-			<button class="btn waves-effect waves-green col s4" type="submit" style="display:none; margin-bottom:10px;float:right"
+			<button class="btn waves-effect waves-light col s4" type="submit" style="display:none; margin-bottom:10px;float:right"
 			 name="action" id="load-more">Load More</button>
 			<!-- </div>
 </div>
@@ -160,12 +154,12 @@
 						<div class="input-field recipe-notes">
 								<input id="notes-input" type="text" class="validate">
 								<label for="text" data-error="wrong" data-success="right">Enter notes for recipes (add recipe name):</label>
-								<button class="btn waves-effect waves-green modal-trigger" type="submit" name="action" id="submit-notes" data-target="notes-modal">Save</button>
+								<button class="btn waves-effect waves-light modal-trigger" type="submit" name="action" id="submit-notes" data-target="notes-modal">Save</button>
 						</div>
 				</div> -->
-				<div class="modal-footer">
-					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-				</div>
+			    <div class="modal-footer">
+			      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+			    </div>
 			</div>
 
 			<!-- Modal Trigger. This is a confirmation modal that appears when the user clicks the trash can icon. -->
@@ -188,31 +182,19 @@
 		<div class="container">
 			<div class="row">
 				<div class="col l6 s12">
-					<h4 class="start-screen-font">bon appéEAT</h4>
+						<h4 class="start-screen-font">bon appéEAT</h4>
 
 					<!-- <h5 class="white-text">bon appéEAT</h5> -->
-					<p class="grey-text text-lighten-4" id="ucsd">© The UCSD Foodie Allstars 2018</p>
+					<p class="grey-text text-lighten-4">© The UCSD Foodie Allstars 2018</p>
 
 				</div>
 				<div class="col l4 offset-l2 s12">
 					<ul>
 						<li>
-							<i class="fab fa-facebook-square fa-2x" style="color:blue;">&nbsp;</i>
-							<i class="fab fa-instagram fa-2x" style="color:brown;">&nbsp;</i>
-							<i class="fab fa-twitter-square fa-2x" style="color:deepskyblue;">&nbsp;</i>
-							<i class="fab fa-youtube fa-2x" style="color:orangered;">&nbsp;</i>
-							<i class="fab fa-pinterest-square fa-2x" style="color:red;">&nbsp;</i>
-							<br>&nbsp;
-							<i class="fab fa-google-plus-square fa-2x" style="color:chartreuse">&nbsp;</i>
-							<i class="fab fa-github-square fa-2x" style="color:green">&nbsp;</i>
-							<i class="fab fa-blogger fa-2x" style="color:orange">&nbsp;</i>
-							<i class="fab fa-flickr fa-2x" style="color:grey">&nbsp;</i>
-							<i class="fab fa-snapchat-square fa-2x" style="color:yellow">&nbsp;</i>
+							<a class="grey-text text-lighten-3" href="#!" id="about-link">About</a>
 						</li>
 						<li>
-							<br>
-							<a class="grey-text text-lighten-3" href="#!" id="about-link">About&nbsp;&nbsp; |</a>
-							<a class="grey-text text-lighten-3" href="#!" id="help-link">&nbsp;&nbsp;Help</a>
+							<a class="grey-text text-lighten-3" href="#!" id="help-link">Help</a>
 						</li>
 					</ul>
 				</div>
@@ -272,26 +254,23 @@
 							<div class="collapsible-header">How do I favorite a recipe?</div>
 							<div class="collapsible-body"><span>If you find a recipe that you really like and want to save it to view later,
 									you can favorite it.</span>
-								<p>To favorite a recipe, click the <i class="small fa fa-birthday-cake"></i> icon next to the recipe you want
-									to
+								<p>To favorite a recipe, click the <i class="small fa fa-cutlery"></i> icon next to the recipe you want to
 									favorite.</p>
 								<p>After you favorite a recipe, it will be added to the <b>Recipe box</b>. To open the <b>Recipe box</b>, click
-									the <i class="small fa fa-birthday-cake"></i> icon in the top navigation bar.</p>
+									the <i class="small fa fa-cutlery"></i> icon in the top navigation bar.</p>
 							</div>
 						</li>
 						<li>
 							<div class="collapsible-header">Where can I view my favorite recipes?</div>
 							<div class="collapsible-body"><span>You can view your favorite recipes in the <b>Recipe box</b>. To open the <b>Recipe
-										box</b>, click the <i class="small fa fa-birthday-cake"></i> icon in the top navigation bar. You need to be
-									logged
+										box</b>, click the <i class="small fa fa-cutlery"></i> icon in the top navigation bar. You need to be logged
 									in to the app to see your favorite recipes.</span></div>
 						</li>
 						<li>
 							<div class="collapsible-header">How do I remove a recipe from my favorites?</div>
 							<div class="collapsible-body"><span>You can remove a saved recipe from the <b>Recipe box</b>.
 									<ol>
-										<li>To open the <b>Recipe box</b>, click the <i class="small fa fa-birthday-cake"></i> icon in the top
-											navigation
+										<li>To open the <b>Recipe box</b>, click the <i class="small fa fa-cutlery"></i> icon in the top navigation
 											bar.</li>
 										<li>Click the <i class="small fa fa-trash"></i> icon next to the recipe you want to remove.</li>
 									</ol>
